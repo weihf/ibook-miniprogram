@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "category-product": "/components/category-product/category-product"
+  }
+}

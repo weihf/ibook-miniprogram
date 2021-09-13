@@ -1,0 +1,22 @@
+.container {
+  display: inline-flex;
+  flex-flow: column;
+  align-items: center;
+  width: 180rpx;
+  margin-top: 20rpx;
+  margin-left: 18rpx;
+}
+
+.product-img image {
+  width: 162rpx;
+  height: 228rpx;
+  border-radius: 5px;
+}
+
+.product-name {
+  width: 150rpx;
+  font-size: 22rpx;
+  font-weight: 400;
+  color: #838383;
+  text-align: center;
+}

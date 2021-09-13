@@ -1,0 +1,26 @@
+<view class="container">
+  <swiper class="swiper-container" autoplay="{{autoplay}}" indicator-dots="{{indicatorDots}}" indicator-color='rgba(255, 255, 255, .3)' indicator-active-color='rgba(255, 255, 255, .9)'>
+    <block wx:for="{{banner}}" wx:key="index">
+      <swiper-item class="swiper-item">
+        <image class='swiper-img' src="{{item.image}}" mode='scaleToFill'></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="theme-container">
+    <block wx:for="{{themes}}" wx:key="index">
+      <view class='theme-box' data-themetype="{{item.theme_type}}" bind:tap='themeNavigation'>
+        <view class='theme-icon'>
+          <image src='{{item.theme_icon}}'></image>
+        </view>
+        <text>{{item.theme_name}}</text>
+      </view>
+    </block>
+  </view>
+  <view class='dividing-line'></view>
+  <view class='products-latest-container'>
+    <title-bar title="畅销图书"></title-bar>
+    <block wx:for="{{products}}" wx:key="index">
+      <product-cloumn product="{{item}}" bind:productDetails="productDetails"></product-cloumn>
+    </block>
+  </view>
+</view>

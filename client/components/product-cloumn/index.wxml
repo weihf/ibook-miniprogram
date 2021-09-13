@@ -1,0 +1,31 @@
+<view class='container'>
+  <view class='product-left'>
+    <view class='product-img'>
+      <image mode="aspectFit" src="{{product.product_img}}"></image>
+    </view>
+  </view>
+  <view class='product-right'>
+    <view>
+      <text class='product-title'>{{product.product_name}}</text>
+    </view>
+    <view class='product-content'>
+      <view class="discount-price-left">
+        <view class='market-price-container'>
+          <text>市场价:</text>
+          <text>￥</text>
+          <text>{{product.product_price}}</text>
+        </view>
+        <view class='discount-price-container'>
+          <view class='discount-price-left'>
+            <text class='discount-price-desc'>优惠价:</text>
+            <text class='discount-price-symbol'>￥</text>
+            <text class='discount-price'>{{product.product_sell_price}}</text>
+          </view>
+        </view>
+      </view>
+      <view class='discount-price-right' data-id="{{product._id}}" bind:tap='productDetails'>
+        <button class='go'>立即购买</button>
+      </view>
+    </view>
+  </view>
+</view>

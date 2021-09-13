@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "title-bar": "/components/title-bar/index",
+    "product-cloumn": "/components/product-cloumn/index"
+  }
+}

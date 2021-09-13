@@ -1,0 +1,16 @@
+<view class='container'>
+  <scroll-view class='left-container' scroll-y="true">
+    <block wx:for="{{menuCategories}}" wx:key="key">
+      <view class="categoryBar {{ menuSelect===item.category_type?'active':''}}" data-id='{{item.category_type}}' data-index='{{index}}' bind:tap="toggleMenu">
+        <text>{{item.category_name}}</text>
+      </view>
+    </block>
+  </scroll-view>
+  <scroll-view class='right-container' scroll-y="true">
+    <view class='product-container'>
+      <block wx:for="{{products}}" wx:key="key">
+        <category-product product="{{item}}" bind:productDetails="productDetails"></category-product>
+      </block>
+    </view>
+  </scroll-view>
+</view>
